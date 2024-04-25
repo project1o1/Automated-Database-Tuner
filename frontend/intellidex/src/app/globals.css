@@ -31,3 +31,22 @@ body {
     text-wrap: balance;
   }
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.custom-anim {
+  background: linear-gradient(90deg, yellow, #de3a00);
+  background-size: 400% 400%;
+  animation: gradient 1.5s ease infinite;
+  background-clip: text;
+}

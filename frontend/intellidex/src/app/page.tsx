@@ -7,10 +7,10 @@ export default function Home() {
       <div className="col-start-7 col-end-13 row-start-3 row-end-13">
         <img src="/rocket.png" width={800}></img>
       </div>
-      <div className="col-start-2 row-start-3 col-end-5 row-end-10">
-        <div className="font-['Bebas_Neue'] text-white text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
+      <div className="col-start-3 row-start-4 col-end-6 row-end-10">
+        <div className="font-['Bebas_Neue'] text-white text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all group">
           make your database wickedly
-          <p>fast</p>
+          <p className="custom-anim bg-clip-text text-transparent">fast</p>
         </div>
         <button className="bg-[linear-gradient(90deg,hsla(58,100%,68%,1)_0%,_hsla(45,80%,81%,1)100%)] rounded-lg  hover:translate-x-1 hover:-translate-y-1 hover:shadow transition">
           <p className="font-['Roboto'] text-xl mx-12 my-4 font-medium text-black ">
@@ -18,7 +18,7 @@ export default function Home() {
           </p>
         </button>
       </div>
-      <div className="col-start-2 col-end-12 row-start-1 row-end-3 flex justify-between items-center font-[Roboto]">
+      <div className="col-start-3 col-end-11 row-start-1 row-end-3 flex justify-between items-center font-[Roboto]">
         <div className="w-[75px] h-[75px] my-auto hover:rotate-45 transition-all">
           <img src="/ln.png" className="w-full h-full "></img>
         </div>
