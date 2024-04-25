@@ -8,9 +8,10 @@ export default function Home() {
         <img src="/rocket.png" width={800}></img>
       </div>
       <div className="col-start-2 row-start-3 col-end-5 row-end-10">
-        <p className="font-['Bebas_Neue'] text-black text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
-          make your database wickedly fast
-        </p>
+        <div className="font-['Bebas_Neue'] text-black text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
+          make your database wickedly
+          <p>fast</p>
+        </div>
         <button className="bg-[linear-gradient(90deg,hsla(58,100%,68%,1)_0%,_hsla(45,80%,81%,1)100%)] rounded-lg  hover:translate-x-1 hover:-translate-y-1 hover:shadow transition">
           <p className="font-['Roboto'] text-xl mx-12 my-4 font-medium text-black ">
             Get Started
