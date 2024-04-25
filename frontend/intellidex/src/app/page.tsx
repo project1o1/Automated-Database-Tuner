@@ -8,7 +8,7 @@ export default function Home() {
         <img src="/rocket.png" width={800}></img>
       </div>
       <div className="col-start-2 row-start-3 col-end-5 row-end-10">
-        <div className="font-['Bebas_Neue'] text-black text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
+        <div className="font-['Bebas_Neue'] text-white text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
           make your database wickedly
           <p>fast</p>
         </div>
