@@ -8,7 +8,7 @@ export default function Home() {
         <img src="/rocket.png" width={800}></img>
       </div>
       <div className="col-start-2 row-start-3 col-end-5 row-end-10">
-        <p className="font-['Bebas_Neue'] text-black text-9xl mb-2">
+        <p className="font-['Bebas_Neue'] text-black text-9xl mb-2 hover:translate-x-1 hover:-translate-y-1 transition-all">
           make your database wickedly fast
         </p>
         <button className="bg-[linear-gradient(90deg,hsla(58,100%,68%,1)_0%,_hsla(45,80%,81%,1)100%)] rounded-lg  hover:translate-x-1 hover:-translate-y-1 hover:shadow transition">
@@ -18,7 +18,7 @@ export default function Home() {
         </button>
       </div>
       <div className="col-start-2 col-end-12 row-start-1 row-end-3 flex justify-between items-center font-[Roboto]">
-        <div className="w-[75px] h-[75px] my-auto">
+        <div className="w-[75px] h-[75px] my-auto hover:rotate-45 transition-all">
           <img src="/ln.png" className="w-full h-full "></img>
         </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </div>
 
-        <button className="rounded-lg bg-transparent border-4 ">
+        <button className="rounded-lg bg-transparent border-4 group hover:bg-white hover:text-black transition-all">
           <p className=" text-xl font-semibold mx-8 my-4 ">Log In</p>
         </button>
       </div>
