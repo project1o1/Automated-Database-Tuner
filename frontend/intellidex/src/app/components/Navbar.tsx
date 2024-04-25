@@ -10,7 +10,7 @@ export default function Navbar() {
           width={50}
           height={50}
         ></Image>
-        <p className="text-white text">Intellidex</p>
+        <p className="">Intellidex</p>
       </div>
     </div>
   );
