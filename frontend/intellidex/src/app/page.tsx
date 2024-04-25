@@ -12,9 +12,20 @@ export default function Home() {
         <p className="font-['Bebas_Neue'] text-black text-9xl mb-2">
           make your database wickedly fast
         </p>
-        <button className="bg-[linear-gradient(90deg,hsla(58,100%,68%,1)_0%,_hsla(45,80%,81%,1)100%)] rounded-md">
+        <button className="bg-[linear-gradient(90deg,hsla(58,100%,68%,1)_0%,_hsla(45,80%,81%,1)100%)] rounded-lg">
           <p className="font-['Roboto'] text-xl mx-12 my-4 font-medium text-black">
             Get Started
+          </p>
+        </button>
+      </div>
+      <div className="col-start-2 col-end-12 row-start-1 row-end-3 flex justify-between items-center">
+        <div className="w-[75px] h-[75px] my-auto">
+          <img src="/ln.png" className="w-full h-full "></img>
+        </div>
+
+        <button className="rounded-lg bg-transparent border-4">
+          <p className="font-['Roboto'] text-xl font-semibold mx-8 my-4 ">
+            Log In
           </p>
         </button>
       </div>
