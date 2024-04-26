@@ -66,12 +66,12 @@ def update_indexes(indexes, index_type):
         if index_type == 1:
             # Materialized indexes
             for index in indexes:
-                requests.post(url + "index", json=payload)
+                requests.post(url + "addIndex", json=payload)
             print("Materialized indexes created")
         elif index_type == 0:
             # Replacement indexes
             for index in indexes:
-                requests.delete(url + "index", json=payload)
+                requests.post(url + "deleteIndex", json=payload)
             print("Replacement indexes dropped")
     except Exception as error:
         print(error)
