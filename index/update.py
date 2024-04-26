@@ -1,5 +1,6 @@
 import psycopg2
 from database import connect
+import requests
 
 conn = connect()
 
@@ -57,24 +58,21 @@ def update_profits(profit, indexes, conn):
 def update_indexes(indexes, index_type):
     if not indexes:
         return
-
-    cur = None
     try:
-        cur = conn.cursor()
+        url = "http://172.16.12.214:5000/"
+        payload = {
+            "indexes": indexes
+        }
         if index_type == 1:
             # Materialized indexes
             for index in indexes:
-                cur.execute("CREATE INDEX ON tuner (%s);" % index)
-            conn.commit()
+                requests.post(url + "index", json=payload)
             print("Materialized indexes created")
         elif index_type == 0:
             # Replacement indexes
             for index in indexes:
-                cur.execute("DROP INDEX IF EXISTS tuner_%s_idx;" % index)
-            conn.commit()
+                requests.delete(url + "index", json=payload)
             print("Replacement indexes dropped")
-    except (Exception, psycopg2.DatabaseError) as error:
+    except Exception as error:
         print(error)
-    finally:
-        if cur:
-            cur.close()
+        return
