@@ -11,25 +11,23 @@ def getcost(query,indexes):
     if indexes == []:
         return float(query["cost"])
     else:
-        # try:
-        #     # request server for cost
-        #     url = "http://172.16.12.214:5000/cost"
-        #     payload = {
-        #         "query": query,
-        #         "indexes": indexes
-        #     }
-        #     response = requests.post(url, json=payload)
-        #     cost = response.json()["cost"]
-        #     return cost
-        # except (Exception, psycopg2.DatabaseError) as error:
-        #     return query["cost"]
-
-        cost = float(query["cost"])
-        for index in indexes:
-            if index in query["columns"]:
-                random_val = random.random() + random.randint(0,1)
-                cost = cost * random_val
-        return cost
+        try:
+            # request server for cost
+            url = "http://172.16.12.214:5000/cost"
+            payload = {
+                "query": query,
+                "indexes": indexes
+            }
+            response = requests.post(url, json=payload)
+            cost = response.json()["cost"]
+            return cost
+        except (Exception, psycopg2.DatabaseError) as error:
+            cost = float(query["cost"])
+            for index in indexes:
+                if index in query["columns"]:
+                    random_val = random.random() + random.randint(0,1)
+                    cost = cost * random_val
+            return cost
 
 def getreplacmentcost(index):
     try:
