@@ -1,3 +1,16 @@
+# import matplotlib.pyplot as plt
+# import threading
+
+# def plot_graph(y):
+#     plt.ion()  # Turn on interactive mode
+#     plt.plot(y, 'r')
+#     plt.pause(0.1)
+#     plt.draw()
+#     plt.ioff()
+
+# def update_plot(y):
+#     threading.Thread(target=plot_graph, args=(y,)).start()
+
 import matplotlib.pyplot as plt
 import random
 def plot_graph(y):

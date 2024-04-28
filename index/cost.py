@@ -13,7 +13,7 @@ def getcost(query,indexes):
     else:
         try:
             # request server for cost
-            url = "http://172.16.12.214:5000/cost"
+            url = "http://172.16.12.214:3000/cost"
             payload = {
                 "query": query,
                 "indexes": indexes

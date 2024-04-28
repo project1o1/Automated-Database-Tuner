@@ -59,19 +59,17 @@ def update_indexes(indexes, index_type):
     if not indexes:
         return
     try:
-        url = "http://172.16.12.214:5000/"
+        url = "http://172.16.12.214:3000/"
         payload = {
             "indexes": indexes
         }
         if index_type == 1:
             # Materialized indexes
-            for index in indexes:
-                requests.post(url + "addIndex", json=payload)
+            requests.post(url + "addIndex", json=payload)
             print("Materialized indexes created")
         elif index_type == 0:
             # Replacement indexes
-            for index in indexes:
-                requests.post(url + "deleteIndex", json=payload)
+            requests.post(url + "deleteIndex", json=payload)
             print("Replacement indexes dropped")
     except Exception as error:
         print(error)

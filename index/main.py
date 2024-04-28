@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from strategy import localOptimalStrategy
 
-SIZE = 200
+SIZE = 400
 MIN_DIFF = 0.5
 
 app = FastAPI()
@@ -38,6 +38,8 @@ async def execute_sql_query(request: Request):
             "cost": cost,
             "columns": columns.split(",")
         }
+        # import threading
+        # threading.Thread(target=localOptimalStrategy, args=(query_dict, SIZE, MIN_DIFF)).start()
         localOptimalStrategy(query_dict, SIZE, MIN_DIFF)
         return {"message": "Parameters received successfully"}
     except Exception as e:
@@ -50,3 +52,8 @@ def read_root():
 if __name__ == "__main__":
     print("Running server")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+# localOptimalStrategy({"query":"SELECT first_name, first_name, first_name, age, username FROM users  WHERE user_id <= 85",
+#                       "columns":["user_id"],
+#                       "cost": 1000}, 400, 0.5)
